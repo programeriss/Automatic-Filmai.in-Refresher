@@ -22,6 +22,10 @@ Edit: login.py, by the comments:
 # enter your filmai.in username here
 # enter you filmai.in password here
 
+Edit: email.php, by the comments: 
+# enter email address here
+# enter email address password here
+
 #PYTHON
 sudo apt-get update;
 sudo apt-get install -y python
