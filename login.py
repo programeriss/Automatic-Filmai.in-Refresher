@@ -8,6 +8,7 @@ import os
 import sys
 import pickle
 from requests import Session
+from Screenshot import Screenshot_Clipping
 
 chromeOptions = Options()
 chromeOptions.add_argument('--headless') # comment if you want to see the browser window visually
@@ -39,10 +40,15 @@ inputElement.send_keys('username') # enter your filmai.in username here
 
 inputElement = browser.find_element_by_id("password_append")
 inputElement.send_keys('password') # enter you filmai.in password here
+
+time.sleep(2)
 inputElement.send_keys(Keys.ENTER)
 
 print("IN PROGRESS")
 
 time.sleep(10)
+ob=Screenshot_Clipping.Screenshot()
+ob.full_Screenshot(browser, save_path=r'.', image_name='page_source.png')
+
 print("DONE")
 browser.quit()

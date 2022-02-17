@@ -29,13 +29,17 @@ sudo apt-get update;
 sudo apt-get install -y pip
 sudo pip install selenium
 sudo pip install selenium-wire
+sudo pip install Selenium-Screenshot
+composer require "swiftmailer/swiftmailer:^6.0"
 
 #TEST
 cd /var/www/html/Automatic-Filmai.in-Refresher; python3 login.py
+cd /var/www/html/Automatic-Filmai.in-Refresher; php email.php
 
 #CRONTAB
 crontab -e
-00 05 * * * cd /var/www/html/Automatic-Filmai.in-Refresher; python3 login.py > /dev/null 2>&100 05 * * * cd /var/www/html/Automatic-Filmai.in-Refresher; python3 login.py > /dev/null 2>&1
+00 05 * * * cd /var/www/html/Automatic-Filmai.in-Refresher; python3 login.py > /dev/null 2>&1
+05 05 * * * cd /var/www/html/Automatic-Filmai.in-Refresher; php email.php > /dev/null 2>&1
 ```
 
 ## Start project locally
