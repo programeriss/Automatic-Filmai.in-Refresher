@@ -38,11 +38,20 @@ print("IN PROGRESS")
 inputElement = browser.find_element_by_id("login_append")
 inputElement.send_keys('username') # enter your filmai.in username here
 
+time.sleep(2)
+
 inputElement = browser.find_element_by_id("password_append")
 inputElement.send_keys('password') # enter you filmai.in password here
 
 time.sleep(2)
 inputElement.send_keys(Keys.ENTER)
+
+print("IN PROGRESS")
+
+time.sleep(5)
+
+element = browser.find_elements_by_class_name("ptsplus")
+element[0].click()
 
 print("IN PROGRESS")
 
