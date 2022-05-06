@@ -26,6 +26,8 @@ Edit: email.php, by the comments:
 # enter email address here
 # enter email address password here
 
+composer install
+
 #PYTHON
 sudo apt-get update;
 sudo apt-get install -y python
